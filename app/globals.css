@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@layer base {
+  body {
+    @apply bg-carbon-bg text-carbon-text font-sans antialiased;
+  }
+
+  /* Custom scrollbar for webkit */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-carbon-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-carbon-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-carbon-muted;
+  }
+}
